@@ -1,4 +1,3 @@
-README.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -13,6 +12,7 @@ target/
 .springBeans
 .sts4-cache
 .env
+spring_mqtt_client-tcptestmosquittoorg1883/
 
 ### IntelliJ IDEA ###
 .idea
