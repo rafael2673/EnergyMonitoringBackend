@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: energy_monitoring_backend
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.xml
+  #security:
+    #token:
+      #secret: ${JWV_SECRET:my-secret-key}
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: ${DB_URL_DEV}
+    username: ${DB_USERNAME_DEV}
+    password: ${DB_PASSWORD_DEV}
+    driver-class-name: org.postgresql.Driver
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: ${DB_URL_PROD}
+    username: ${DB_USERNAME_PROD}
+    password: ${DB_PASSWORD_PROD}
+    driver-class-name: org.postgresql.Driver
